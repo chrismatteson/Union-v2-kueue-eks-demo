@@ -1,0 +1,4 @@
+# Example terraform.tfvars file for helm-charts
+# Copy this to terraform.tfvars and fill in your values
+
+org_name = "amazon"

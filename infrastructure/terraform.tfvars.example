@@ -1,0 +1,13 @@
+# Example terraform.tfvars file
+# Copy this to terraform.tfvars and fill in your values
+
+cluster_name = "my-union-cluster"
+region       = "us-east-2"
+org_name     = "amazon"
+
+# Optional: Override defaults
+# node_instance_type = "t3a.xlarge"
+# desired_size       = 2
+# min_size           = 1
+# max_size           = 4
+# kubernetes_version = "1.28"
