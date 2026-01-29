@@ -75,8 +75,8 @@ resource "helm_release" "unionai_dataplane" {
       org_name             = var.org_name
       bucket_name          = data.terraform_remote_state.infrastructure.outputs.s3_bucket_name
       region               = data.terraform_remote_state.infrastructure.outputs.region
-      client_id            = data.terraform_remote_state.infrastructure.outputs.s3_access_key_id
-      client_secret        = data.terraform_remote_state.infrastructure.outputs.s3_secret_access_key
+      client_id            = var.client_id
+      client_secret        = var.client_secret
       union_flyte_role_arn = data.terraform_remote_state.infrastructure.outputs.union_flyte_role_arn
     })
   ]
