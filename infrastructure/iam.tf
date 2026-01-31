@@ -12,7 +12,7 @@ resource "aws_iam_role" "union_flyte" {
         }
         Action = "sts:AssumeRoleWithWebIdentity"
         Condition = {
-          StringEquals = {
+          StringLike = {
             "${module.eks.oidc_provider}:sub" : "system:serviceaccount:*:*"
             "${module.eks.oidc_provider}:aud" : "sts.amazonaws.com"
           }
@@ -23,7 +23,7 @@ resource "aws_iam_role" "union_flyte" {
 
   tags = {
     Name        = "${var.cluster_name}-union-flyte-role"
-    Environment = "production"
+    Environment = "staging"
     Terraform   = "true"
   }
 }
