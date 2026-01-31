@@ -23,7 +23,7 @@ resource "aws_iam_role" "union_flyte" {
 
   tags = {
     Name        = "${var.cluster_name}-union-flyte-role"
-    Environment = "staging"
+    Environment = "production"
     Terraform   = "true"
   }
 }
